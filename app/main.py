@@ -1,7 +1,7 @@
 """
 fastapi dev app/main.py --reload
 uvicorn app.main:app --reload
-hello = await fetch('http://localhost:8000/').then(res=>res.json()).then(console.log)
+fetch('http://localhost:8000/').then(res=>res.json()).then(console.log)
 """
 
 from fastapi import FastAPI
