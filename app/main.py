@@ -34,7 +34,7 @@ app.include_router(vote.router)
 # Request get method url find for the first path match
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hellu mai Zâu'ss Mezzy xinh đẹp tuỵt zời cụa tui"}
 
 
 
