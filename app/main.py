@@ -8,6 +8,7 @@ fetch('http://localhost:8000/').then(res=>res.json()).then(console.log)
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from . import models
 from .routers import post, user, auth, vote
 
@@ -34,7 +35,9 @@ app.include_router(vote.router)
 # Request get method url find for the first path match
 @app.get("/")
 async def root():
-    return {"message": "Hellu mai Zâu'ss Mezzy xinh đẹp tuỵt zời cụa tui"}
+    return JSONResponse(content={"message": "Hellu mai Zâu'ss Mezzy xinh đẹp tuỵt zời cụa tui"}, media_type="application/json; charset=utf-8")
+# async def root():
+#     return {"message": "Hello World"}
 
 
 
