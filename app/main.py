@@ -1,6 +1,8 @@
 """
 fastapi dev app/main.py --reload
 uvicorn app.main:app --reload
+uvicorn --host 0.0.0.0 app.main:app
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000
 fetch('http://localhost:8000/').then(res=>res.json()).then(console.log)
 """
 
