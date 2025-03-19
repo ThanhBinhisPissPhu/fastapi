@@ -1,8 +1,8 @@
-"""Recreate manually-dropped tables
+"""generate all tables
 
-Revision ID: 739f9e547854
-Revises: 5d3a801aad49
-Create Date: 2025-03-10 14:34:11.262699
+Revision ID: cf4a0628e2cb
+Revises: 
+Create Date: 2025-03-19 15:51:06.530635
 
 """
 from typing import Sequence, Union
@@ -12,8 +12,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '739f9e547854'
-down_revision: Union[str, None] = '5d3a801aad49'
+revision: str = 'cf4a0628e2cb'
+down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
