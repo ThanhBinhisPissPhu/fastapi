@@ -10,6 +10,10 @@ router = APIRouter(
 
 @router.post("/login", response_model=schemas.Token)
 async def login(user_credentials: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    
+    if not user_credentials.username or not user_credentials.password:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Username and password are required")
+    
     user = db.query(models.Users).filter(models.Users.email == user_credentials.username).first()
     if user is None:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid credentials")
