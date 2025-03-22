@@ -35,7 +35,7 @@ app.include_router(vote.router)
 # Request get method url find for the first path match
 @app.get("/")
 async def root():
-    return JSONResponse(content={"message": "Hellu mai Zâu'ss Mezzy xinh đẹp tuỵt zời cụa tui"}, media_type="application/json; charset=utf-8")
+    return JSONResponse(content={"message": "Hellu mai Zâu'ss Mezzy xinh đẹp tuỵt zời cụa tui, ci/cd test nè"}, media_type="application/json; charset=utf-8")
 # async def root():
 #     return {"message": "Hello World"}
 
